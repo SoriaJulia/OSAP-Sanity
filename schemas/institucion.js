@@ -37,21 +37,11 @@ export default {
       name: "cartillaUrl",
       type: "url",
       title: "Link a la cartilla",
-      validation: (Rule) =>
-        Rule.custom((field, context) => {
-          if (typeof field === "undefined" && !context.document.archivo) return "Requerido si no se sube un documento";
-          return true;
-        }),
     },
     {
       name: "archivo",
       type: "file",
       title: "Documento con la cartilla",
-      validation: (Rule) =>
-        Rule.custom((field, context) => {
-          if (typeof field === "undefined" && !context.document.cartillaUrl) return "Requerido si no se sube un Link";
-          return true;
-        }),
     },
   ],
 };
