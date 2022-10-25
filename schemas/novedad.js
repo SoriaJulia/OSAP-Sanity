@@ -32,6 +32,18 @@ export default {
 				dateFormat: 'DD/MM/YYYY',
 			},
 		},
+		{
+			name: 'slug',
+			type: 'slug',
+			title: 'URL',
+			description:
+				'Nombre a mostrar en la pagina de la noticia, debe ser unico',
+			validation: (Rule) => Rule.required(),
+			options: {
+				source: 'titulo',
+				maxLength: 200, // will be ignored if slugify is set
+			},
+		},
 	],
 	initialValue: {
 		fechaPublicacion: new Date().toISOString(),
