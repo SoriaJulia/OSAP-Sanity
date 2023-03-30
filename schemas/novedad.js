@@ -12,7 +12,7 @@ export default {
 		{
 			name: 'contenido',
 			type: 'array',
-			of: [{ type: 'block' }],
+			of: [{type:'image'}, { type: 'block' }],
 			title: 'Contenido',
 			validation: (Rule) => Rule.required(),
 		},
