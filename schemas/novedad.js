@@ -20,6 +20,14 @@ export default {
 			name: 'imagen',
 			type: 'image',
 			title: 'Imagen',
+			description:'Se va a mostrar en un rectangulo de 600*400',
+			validation: (Rule) => Rule.required(),
+		},
+		{
+			name: 'miniatura',
+			type: 'image',
+			title: 'Miniatura',
+			description:'Se va a mostrar en un rectangulo de 380*300',
 			validation: (Rule) => Rule.required(),
 		},
 		{
